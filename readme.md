@@ -27,11 +27,19 @@ sudo apt install ros-humble-ros2-controllers
 
 ## Installation
 
-1. Clone this repository into your ROS2 workspace:
+1. Clone this repository into your ROS2 workspace, src folder
+
+```
+cd ..
+```
+
 ```
 colcon build
 ```
 
+```
+source install/setup.bash   
+```
 to launch the demo package
 
 ```
