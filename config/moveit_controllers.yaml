@@ -1,0 +1,64 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - wrist_controller
+    - index_controller
+    - pinky_controller
+    - ring_controller
+    - mid_controller
+    - thumb_controller
+
+  wrist_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - wrist_pitch_lower
+      - wrist_yaw
+  index_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - index_yaw
+      - index_pitch
+      - index_knuckle
+      - index_tip
+  pinky_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - middle_yaw
+      - middle_pitch
+      - middle_knuckle
+      - middle_tip
+  ring_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - pinky_yaw
+      - pinky_pitch
+      - pinky_knuckle
+      - pinky_tip
+  mid_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - middle_pitch
+      - middle_knuckle
+      - middle_tip
+  thumb_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - thumb_roll
+      - thumb_pitch
+      - thumb_knuckle
+      - thumb_tip

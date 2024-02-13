@@ -1,0 +1,29 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: dexhand_description
+    relative_path: urdf/dexhand.xacro
+  srdf:
+    relative_path: config/dexhand.srdf
+  package_settings:
+    author_name: "Trent Shumay "
+    author_email: trent@iotdesignshop.com
+    generated_timestamp: 1704764513
+  control_xacro:
+    command:
+      - position
+      - velocity
+      - effort
+    state:
+      - position
+      - effort
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+      - velocity
+      - effort
+    state:
+      - position
+      - effort

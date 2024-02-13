@@ -1,0 +1,101 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    wrist_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    index_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    pinky_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    ring_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    mid_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    thumb_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+wrist_controller:
+  ros__parameters:
+    joints:
+      - wrist_pitch_lower
+      - wrist_yaw
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position
+index_controller:
+  ros__parameters:
+    joints:
+      - index_yaw
+      - index_pitch
+      - index_knuckle
+      - index_tip
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position
+pinky_controller:
+  ros__parameters:
+    joints:
+      - middle_yaw
+      - middle_pitch
+      - middle_knuckle
+      - middle_tip
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position
+ring_controller:
+  ros__parameters:
+    joints:
+      - pinky_yaw
+      - pinky_pitch
+      - pinky_knuckle
+      - pinky_tip
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position
+mid_controller:
+  ros__parameters:
+    joints:
+      - middle_pitch
+      - middle_knuckle
+      - middle_tip
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position
+thumb_controller:
+  ros__parameters:
+    joints:
+      - thumb_roll
+      - thumb_pitch
+      - thumb_knuckle
+      - thumb_tip
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position

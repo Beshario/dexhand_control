@@ -1,0 +1,21 @@
+# Default initial positions for dexhand's ros2_control fake system
+
+initial_positions:
+  index_knuckle: 0
+  index_pitch: 0
+  index_tip: 0
+  index_yaw: 0
+  middle_knuckle: 0
+  middle_pitch: 0
+  middle_tip: 0
+  middle_yaw: 0
+  pinky_knuckle: 0
+  pinky_pitch: 0
+  pinky_tip: 0
+  pinky_yaw: 0
+  thumb_knuckle: 0
+  thumb_pitch: 0
+  thumb_roll: 0
+  thumb_tip: 0
+  wrist_pitch_lower: 0
+  wrist_yaw: 0

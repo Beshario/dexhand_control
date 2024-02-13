@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="dexhand_ros2_control" params="name initial_positions_file">
+        <xacro:property name="initial_positions" value="${load_yaml(initial_positions_file)['initial_positions']}"/>
+
+        <ros2_control name="${name}" type="system">
+            <hardware>
+                <!-- By default, set up controllers for simulation. This won't work on real hardware -->
+                <plugin>mock_components/GenericSystem</plugin>
+            </hardware>
+            <joint name="wrist_pitch_lower">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['wrist_pitch_lower']}</param>
+                </state_interface>
+            </joint>
+            <joint name="wrist_yaw">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['wrist_yaw']}</param>
+                </state_interface>
+            </joint>
+            <joint name="index_yaw">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['index_yaw']}</param>
+                </state_interface>
+            </joint>
+            <joint name="index_pitch">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['index_pitch']}</param>
+                </state_interface>
+            </joint>
+            <joint name="index_knuckle">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['index_knuckle']}</param>
+                </state_interface>
+            </joint>
+            <joint name="index_tip">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['index_tip']}</param>
+                </state_interface>
+            </joint>
+            <joint name="middle_yaw">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['middle_yaw']}</param>
+                </state_interface>
+            </joint>
+            <joint name="middle_pitch">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['middle_pitch']}</param>
+                </state_interface>
+            </joint>
+            <joint name="middle_knuckle">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['middle_knuckle']}</param>
+                </state_interface>
+            </joint>
+            <joint name="middle_tip">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['middle_tip']}</param>
+                </state_interface>
+            </joint>
+            <joint name="pinky_yaw">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['pinky_yaw']}</param>
+                </state_interface>
+            </joint>
+            <joint name="pinky_pitch">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['pinky_pitch']}</param>
+                </state_interface>
+            </joint>
+            <joint name="pinky_knuckle">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['pinky_knuckle']}</param>
+                </state_interface>
+            </joint>
+            <joint name="pinky_tip">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['pinky_tip']}</param>
+                </state_interface>
+            </joint>
+            <joint name="thumb_roll">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['thumb_roll']}</param>
+                </state_interface>
+            </joint>
+            <joint name="thumb_pitch">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['thumb_pitch']}</param>
+                </state_interface>
+            </joint>
+            <joint name="thumb_knuckle">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['thumb_knuckle']}</param>
+                </state_interface>
+            </joint>
+            <joint name="thumb_tip">
+                <command_interface name="position"/>
+                <command_interface name="velocity"/>
+                <command_interface name="effort"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['thumb_tip']}</param>
+                </state_interface>
+            </joint>
+
+        </ros2_control>
+    </xacro:macro>
+</robot>
