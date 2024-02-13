@@ -1,3 +1,4 @@
+
 # dexhand_control ROS2 Package
 
 ## Overview
@@ -12,17 +13,27 @@ Ensure the following dependencies are installed in your ROS2 environment:
 - `ros2_controllers`: ROS2 package providing various controllers for robot joints.
 - `dexhand_description`: Package containing the DexHand robot description files.
 
+```
+sudo apt install ros-humble-moveit 
+```
 
+```
 sudo apt install ros-humble-ros2-control 
+```
+
+```
 sudo apt install ros-humble-ros2-controllers
+```
+
 ## Installation
 
 1. Clone this repository into your ROS2 workspace:
-
+```
 colcon build
+```
 
 to launch the demo package
 
-'''
+```
 ros2 launch dexhand_control demo.launch.py
-'''
+```
