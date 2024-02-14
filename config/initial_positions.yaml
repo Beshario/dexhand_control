@@ -13,6 +13,9 @@ initial_positions:
   pinky_pitch: 0
   pinky_tip: 0
   pinky_yaw: 0
+  ring_knuckle: 0
+  ring_pitch: 0
+  ring_tip: 0
   thumb_knuckle: 0
   thumb_pitch: 0
   thumb_roll: 0

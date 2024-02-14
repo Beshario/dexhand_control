@@ -15,14 +15,14 @@
     <group name="index">
         <chain base_link="index_bulk_1" tip_link="index_tip_1"/>
     </group>
-    <group name="pinky">
+    <group name="mid">
         <chain base_link="middle_bulk_1" tip_link="middle_tip_1"/>
     </group>
     <group name="ring">
-        <chain base_link="ring_bulk_1" tip_link="pinky_tip_1"/>
+        <chain base_link="ring_knuckle_1" tip_link="ring_tip_1"/>
     </group>
-    <group name="mid">
-        <chain base_link="middle_knuckle_1" tip_link="middle_tip_1"/>
+    <group name="pinky">
+        <chain base_link="ring_bulk_1" tip_link="pinky_tip_1"/>
     </group>
     <group name="thumb">
         <chain base_link="thumb_cmc_b_1" tip_link="thumb_tip_1"/>
@@ -34,7 +34,7 @@
         <joint name="thumb_roll" value="0"/>
         <joint name="thumb_tip" value="0.3818"/>
     </group_state>
-    <group_state name="lefault" group="wrist">
+    <group_state name="Default" group="wrist">
         <joint name="wrist_pitch_lower" value="-0.4425"/>
         <joint name="wrist_yaw" value="0.0024"/>
     </group_state>

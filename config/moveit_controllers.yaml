@@ -6,9 +6,9 @@ moveit_simple_controller_manager:
   controller_names:
     - wrist_controller
     - index_controller
-    - pinky_controller
-    - ring_controller
     - mid_controller
+    - ring_controller
+    - pinky_controller
     - thumb_controller
 
   wrist_controller:
@@ -27,7 +27,7 @@ moveit_simple_controller_manager:
       - index_pitch
       - index_knuckle
       - index_tip
-  pinky_controller:
+  mid_controller:
     type: FollowJointTrajectory
     action_ns: follow_joint_trajectory
     default: true
@@ -41,18 +41,18 @@ moveit_simple_controller_manager:
     action_ns: follow_joint_trajectory
     default: true
     joints:
-      - pinky_yaw
-      - pinky_pitch
-      - pinky_knuckle
-      - pinky_tip
-  mid_controller:
+      - ring_pitch
+      - ring_knuckle
+      - ring_tip
+  pinky_controller:
     type: FollowJointTrajectory
     action_ns: follow_joint_trajectory
     default: true
     joints:
-      - middle_pitch
-      - middle_knuckle
-      - middle_tip
+      - pinky_yaw
+      - pinky_pitch
+      - pinky_knuckle
+      - pinky_tip
   thumb_controller:
     type: FollowJointTrajectory
     action_ns: follow_joint_trajectory

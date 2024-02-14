@@ -11,7 +11,7 @@ controller_manager:
       type: joint_trajectory_controller/JointTrajectoryController
 
 
-    pinky_controller:
+    mid_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
 
@@ -19,7 +19,7 @@ controller_manager:
       type: joint_trajectory_controller/JointTrajectoryController
 
 
-    mid_controller:
+    pinky_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
 
@@ -37,9 +37,9 @@ wrist_controller:
       - wrist_yaw
     command_interfaces:
       - position
-      - velocity
     state_interfaces:
       - position
+      - velocity
 index_controller:
   ros__parameters:
     joints:
@@ -49,10 +49,10 @@ index_controller:
       - index_tip
     command_interfaces:
       - position
-      - velocity
     state_interfaces:
       - position
-pinky_controller:
+      - velocity
+mid_controller:
   ros__parameters:
     joints:
       - middle_yaw
@@ -61,10 +61,21 @@ pinky_controller:
       - middle_tip
     command_interfaces:
       - position
-      - velocity
     state_interfaces:
       - position
+      - velocity
 ring_controller:
+  ros__parameters:
+    joints:
+      - ring_pitch
+      - ring_knuckle
+      - ring_tip
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+pinky_controller:
   ros__parameters:
     joints:
       - pinky_yaw
@@ -73,20 +84,9 @@ ring_controller:
       - pinky_tip
     command_interfaces:
       - position
-      - velocity
     state_interfaces:
       - position
-mid_controller:
-  ros__parameters:
-    joints:
-      - middle_pitch
-      - middle_knuckle
-      - middle_tip
-    command_interfaces:
-      - position
       - velocity
-    state_interfaces:
-      - position
 thumb_controller:
   ros__parameters:
     joints:
@@ -96,6 +96,6 @@ thumb_controller:
       - thumb_tip
     command_interfaces:
       - position
-      - velocity
     state_interfaces:
       - position
+      - velocity

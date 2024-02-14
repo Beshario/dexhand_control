@@ -7,23 +7,19 @@ moveit_setup_assistant_config:
   package_settings:
     author_name: "Trent Shumay "
     author_email: trent@iotdesignshop.com
-    generated_timestamp: 1704764513
+    generated_timestamp: 1707863177
   control_xacro:
     command:
       - position
-      - velocity
-      - effort
     state:
       - position
-      - effort
+      - velocity
   modified_urdf:
     xacros:
       - control_xacro
   control_xacro:
     command:
       - position
-      - velocity
-      - effort
     state:
       - position
-      - effort
+      - velocity
